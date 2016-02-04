@@ -4,7 +4,7 @@
   "description": "Rather than compiling your sass it follows all of your `@import` rules and outputs a concatenated file containing everything ready to then be compiled.",
   "bin": {
     "sassimport": "./bin/sass-importer.js"
-  }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/stewartknapman/sass-importer/issues"
   },
-  "homepage": "https://github.com/stewartknapman/sass-importer#readme"
+  "homepage": "https://github.com/stewartknapman/sass-importer#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
