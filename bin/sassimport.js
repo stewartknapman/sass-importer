@@ -10,7 +10,7 @@ var err = function (message) {
 };
 
 if (argv._[0]) {
-  var data;
+  var data = '';
   var output = argv.o || argv.output;
   var paths = new SassImporter(argv._[0]);
   
@@ -19,9 +19,7 @@ if (argv._[0]) {
   }
   
   if (output) {
-    fs.writeFileSync(output, data); /*, function (error) {
-      if (error) err('ERR:', error);
-    });*/
+    fs.writeFileSync(output, data);
   } else {
     process.stdout.write(data);
   }
