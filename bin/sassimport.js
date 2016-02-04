@@ -1,15 +1,32 @@
 #!/usr/bin/env node
 
-var concat = require('concat');
+var fs = require('fs');
 var argv = require('minimist')(process.argv.slice(2));
 var SassImporter = require('../lib/sass-importer.js');
 
-if (argv._[0] && argv._[1]) {
+var err = function (message) {
+  console.log(message);
+  process.exit(1);
+};
+
+if (argv._[0]) {
+  var data;
+  var output = argv.o || argv.output;
   var paths = new SassImporter(argv._[0]);
-  concat(paths, argv._[1], function (error) {
-    if (error) console.log('ERR:', error);
-  });
+  
+  for (var i = 0; i < paths.length; i++) {
+    data += fs.readFileSync(paths[i]);
+  }
+  
+  if (output) {
+    fs.writeFile(output, data, function (error) {
+      if (error) err('ERR:', error);
+    });
+  } else {
+    process.stdout.write(data);
+  }
+  process.exit(0);
   
 } else {
-  console.log('ERR: Please supply an input and/or output file');
+  err('ERR: Please supply an input file');
 }

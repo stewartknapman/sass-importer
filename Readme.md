@@ -4,6 +4,8 @@ Rather than compiling your sass it follows all of your `@import` rules and outpu
 
 Why? Because Shopify.
 
-To use run:
+To use simply run:
 
-    sassimport [input file] [output file]
+    sassimport [input file] -o|--output [output file]
+    
+You can either output the contents off the file or pipe it to something else.
