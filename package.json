@@ -1,0 +1,21 @@
+{
+  "name": "sass-importer",
+  "version": "1.0.0",
+  "description": "Rather than compiling your sass it follows all of your `@import` rules and outputs a concatenated file containing everything ready to then be compiled.",
+  "bin": {
+    "sassimport": "./bin/sass-importer.js"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stewartknapman/sass-importer.git"
+  },
+  "author": "@stewartknapman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stewartknapman/sass-importer/issues"
+  },
+  "homepage": "https://github.com/stewartknapman/sass-importer#readme"
+}
