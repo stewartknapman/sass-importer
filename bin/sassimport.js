@@ -19,9 +19,9 @@ if (argv._[0]) {
   }
   
   if (output) {
-    fs.writeFile(output, data, function (error) {
+    fs.writeFileSync(output, data); /*, function (error) {
       if (error) err('ERR:', error);
-    });
+    });*/
   } else {
     process.stdout.write(data);
   }
