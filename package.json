@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/stewartknapman/sass-importer#readme",
   "dependencies": {
-    "concat": "^1.0.0",
     "minimist": "^1.2.0"
   }
 }
