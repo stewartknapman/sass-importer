@@ -1,6 +1,6 @@
 {
   "name": "sass-importer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rather than compiling your sass it follows all of your `@import` rules and outputs a concatenated file containing everything ready to then be compiled.",
   "bin": {
     "sassimport": "./bin/sassimport.js"
